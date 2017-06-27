@@ -1,0 +1,19 @@
+*/算出1+3+5+7+9的结果
+class WhileTest
+{
+    public static void main(String[] arg)
+    {
+        int a = 0,b = 1;
+
+            while (b <= 9)
+
+            {
+                a = a+b;
+
+                b+=2;
+            }
+
+
+    System.out.println("a="+a+"  "+b);
+    }
+}
