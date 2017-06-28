@@ -6,7 +6,7 @@ class Demo
         {
             for(int y=1;y<=x;y++)
             {
-                System.out.print(y+"*"+x+"="+x*y);
+                System.out.print(y+"*"+x+"="+x*y+"\t");
                 System.out.print("  ");
             }
             System.out.println();
