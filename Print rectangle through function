@@ -1,0 +1,28 @@
+class Demo
+{
+    public static void main(String[] args)
+    {
+       Sq(3,3);
+    }
+    public static void Sq(int a,int b)
+    {
+        for(int x=1;x<=a;x++)
+        {
+            System.out.print("-");
+        }
+        System.out.println();
+        for(int y=1; y<=b; y++)
+        {
+            System.out.print("|");
+            for(int x=1; x<a;x++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println("|");
+        }
+        for(int x=1;x<=a;x++)
+        {
+            System.out.print("-");
+        }
+    }
+}
