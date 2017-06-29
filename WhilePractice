@@ -1,4 +1,4 @@
-*/算出1+3+5+7+9的结果
+//算出1+3+5+7+9的结果
 class WhileTest
 {
     public static void main(String[] arg)
