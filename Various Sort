@@ -1,0 +1,92 @@
+class Sort
+{
+    public static void main(String[] args)
+    {
+        int[] arr = new int[]{99, 98, 97, 96, 95};
+        //1.选出最大值：
+        /*System.out.print(getMax(arr));
+        */
+
+
+        //2.selectSort排序：
+        /*selectSort(arr);
+          for(int x=0; x<arr.length;x++)
+             System.out.println(arr[x]);
+        */
+
+
+        //3.bubbleSort排序：
+        /*bubbleSort(arr);
+        for(int x=0;x<arr.length;x++)
+            System.out.println(arr[x]);
+        */
+
+        //4.记录最大值到比较末尾再换
+        optimize(arr);
+        for(int x=0;x<arr.length;x++)
+            System.out.println(arr[x]);
+
+    }
+    //1.选出最大值。
+    public static int getMax(int[] arr)
+    {
+        //分别拿每个值跟最大值比较，如果大，赋给最大值。
+        int max=arr[0];
+        for(int x=1;x<arr.length-1;x++)
+        {
+            if (arr[x] > max)
+                max=arr[x];
+        }
+        return max;
+    }
+    //2.selectSort排序：
+    public static void selectSort(int[] arr)
+    {
+        //拿每个数跟当回合第一个数比较，如果小，换位置。
+        for(int x=0;x<=arr.length-1;x++)
+            for(int y=x+1;y<=arr.length-1;y++)
+                if(arr[x]>arr[y])
+                {
+                    int temp=arr[x];
+                    arr[x]=arr[y];
+                    arr[y]=temp;
+                }
+
+    }
+    //3.bubbleSort排序
+    public static void bubbleSort(int[] arr)
+    {
+        //拿每个数跟后一数比较，如果大，换位置。
+        for(int x=arr.length;x>1;x--)
+            for(int y=0;y<x-1;y++)
+                if(arr[y]>arr[y+1])
+                {
+                    int temp=arr[y];
+                    arr[y]=arr[y+1];
+                    arr[y+1]=temp;
+                }
+    }
+    //4.优化
+    public static void optimize(int[] arr)
+    {
+        //那两个变量 一个变量记录数值一个记录角标。
+        for(int x=0; x<arr.length-1;x++)
+        {
+            int number=arr[x];
+            int index=x;
+            for(int y=x+1;y<arr.length;y++)
+            {
+                if (number > arr[y]) {
+                    number = arr[y];
+                    index = y;
+                }
+                if (index != x)
+                    swap(arr, x, index);
+            }
+        }
+
+
+
+
+    }
+}
