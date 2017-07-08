@@ -1,0 +1,21 @@
+class serach
+{
+    public static void main(String[] args)
+    {
+        int[] arr = new int[]{99, 98, 97, 96, 95};
+        System.out.print(search(arr,97));
+
+
+    }
+
+    public static int search(int[] arr,int key)
+    {
+        for (int x = 0; x < arr.length; x++)
+        {
+            if (arr[x] == key)
+                return key;
+        }
+        return -1;
+
+    }
+}
